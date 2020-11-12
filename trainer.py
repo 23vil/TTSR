@@ -120,7 +120,7 @@ class Trainer():
     def evaluate(self, current_epoch=0):
         self.logger.info('Epoch ' + str(current_epoch) + ' evaluation process...')
 
-        if (self.args.dataset == 'CUFED'):
+        if (self.args.dataset == 'IMM'):  #Dataset name has to be manually altered here.. better Solution!
             self.model.eval()
             with torch.no_grad():
                 psnr, ssim, cnt = 0., 0., 0

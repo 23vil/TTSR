@@ -9,7 +9,7 @@ def conv3x3(in_channels, out_channels, stride=1):
 
 
 class Discriminator(nn.Module):
-    def __init__(self, in_size=160):
+    def __init__(self, in_size=2048):
         super(Discriminator, self).__init__()
         self.conv1 = conv3x3(3, 32)
         self.LReLU1 = nn.LeakyReLU(0.2)
@@ -57,6 +57,6 @@ class Discriminator(nn.Module):
 
 if __name__ == '__main__':
     model = discriminator()
-    x = torch.ones(1, 3, 160, 160)
+    x = torch.ones(1, 3, 2048, 2048)
     out = model(x)
     print (out.size())

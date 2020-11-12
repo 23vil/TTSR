@@ -21,7 +21,7 @@ parser.add_argument('--logger_name', type=str, default='TTSR',
                     help='Logger name')
 
 ### device setting
-parser.add_argument('--cpu', type=str2bool, default=False,
+parser.add_argument('--cpu', type=str2bool, default=True,
                     help='Use CPU to run code')
 parser.add_argument('--num_gpu', type=int, default=1,
                     help='The number of GPU used in training')
@@ -81,7 +81,7 @@ parser.add_argument('--gamma', type=float, default=0.5,
                     help='Learning rate decay factor for step decay')
 
 ### training setting
-parser.add_argument('--batch_size', type=int, default=9,
+parser.add_argument('--batch_size', type=int, default=1,
                     help='Training batch size')
 parser.add_argument('--train_crop_size', type=int, default=40,
                     help='Training data crop size')

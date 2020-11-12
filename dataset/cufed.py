@@ -91,8 +91,8 @@ class TrainSet(Dataset):
         Ref_sr_sub = np.array(Image.fromarray(Ref_sr_sub).resize((w2, h2), Image.BICUBIC))
     
         ### complete ref and ref_sr to the same size, to use batch_size > 1
-        Ref = np.zeros((160, 160, 3))
-        Ref_sr = np.zeros((160, 160, 3))
+        Ref = np.zeros((2048, 2048, 3))
+        Ref_sr = np.zeros((2048, 2048, 3))
         Ref[:h2, :w2, :] = Ref_sub
         Ref_sr[:h2, :w2, :] = Ref_sr_sub
 

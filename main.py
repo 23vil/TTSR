@@ -25,7 +25,7 @@ if __name__ == '__main__':
         _model = nn.DataParallel(_model, list(range(args.num_gpu)))
 
     ### loss
-    _loss_all = get_loss_dict(args, _logger)
+    _loss_all = get_loss_dict(args, _logger) #defined in loss/loss.pt
 
     ### trainer
     t = Trainer(args, _logger, _dataloader, _model, _loss_all)
