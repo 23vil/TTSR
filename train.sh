@@ -14,12 +14,12 @@ python main.py --save_dir ./train/IMM/TTSR \
                --per_w 1e-2 \
                --tpl_w 1e-2 \
                --adv_w 1e-3 \
-               --batch_size 1 \
+               --batch_size 20 \
                --num_init_epochs 2 \
                --num_epochs 50 \
                --print_every 2 \
                --save_every 10 \
-               --val_every 10
+               --val_every 1
 
 
 # ### training TTSR-rec

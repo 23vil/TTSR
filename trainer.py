@@ -144,7 +144,7 @@ class Trainer():
 
                     psnr += _psnr
                     ssim += _ssim
-
+                    
                 psnr_ave = psnr / cnt
                 ssim_ave = ssim / cnt
                 self.logger.info('Ref  PSNR (now): %.3f \t SSIM (now): %.4f' %(psnr_ave, ssim_ave))
